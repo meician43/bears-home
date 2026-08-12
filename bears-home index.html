@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>熊熊的家🐻‍❄️🐻 | 新家清單 & 日常選物</title>
+    <style>
+        :root {
+            --bg-color: #faf8f5;
+            --card-bg: #ffffff;
+            --text-main: #2b2b2b;
+            --text-sub: #666666;
+            --accent-color: #c89666;
+            --accent-hover: #b38253;
+            --border-color: #eee9e0;
+            --badge-bg: #f3ece4;
+            --sub-btn-bg: #f5ede6;
+            --sub-btn-text: #8c6b4d;
+            --threads-btn-bg: #111111;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 20px 16px 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Header 區域 */
+        header {
+            text-align: center;
+            padding: 20px 10px 25px;
+        }
+
+        .profile-avatar {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background-color: #eaddcf;
+            margin: 0 auto 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        p.bio {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 12px;
+        }
+
+        /* 頂部 Threads 帳號追蹤按鈕 */
+        .threads-main-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background-color: var(--threads-btn-bg);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: opacity 0.2s;
+        }
+
+        .threads-main-btn:active {
+            opacity: 0.8;
+        }
+
+        .notice {
+            font-size: 0.78rem;
+            color: #8c7a6b;
+            background: var(--badge-bg);
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        /* 分類標題 */
+        .category-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin: 28px 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-main);
+        }
+
+        /* 商品卡片 */
+        .item-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            overflow: hidden;
+        }
+
+        /* 加大圖片區域 */
+        .item-img {
+            width: 100%;
+            height: 220px;
+            border-radius: 12px;
+            object-fit: cover;
+            background-color: #f3f3f3;
+        }
+
+        .item-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-brand {
+            font-size: 0.75rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .item-name {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin: 2px 0 6px;
+            color: var(--text-main);
+            line-height: 1.35;
+        }
+
+        .item-desc {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-bottom: 12px;
+            line-height: 1.45;
+        }
+
+        /* 按鈕群組區塊 */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* 浪漫風格的 Threads 故事按鈕 */
+        .more-photos-btn {
+            display: block;
+            background-color: var(--sub-btn-bg);
+            color: var(--sub-btn-text);
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.2s;
+        }
+
+        .more-photos-btn:active {
+            background-color: #ebdcd0;
+        }
+
+        /* 通用主按鈕：去各平台/官網 */
+        .affiliate-btn {
+            display: block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 11px 16px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(200, 150, 102, 0.25);
+        }
+
+        .affiliate-btn:active {
+            transform: scale(0.98);
+            background-color: var(--accent-hover);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #b0b0b0;
+            margin-top: 35px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="profile-avatar">🐻</div>
+        <h1>熊熊的家🐻‍❄️🐻 | 新家清單 & 日常選物</h1>
+        <p class="bio">分享開箱過的傢俱、電器與軟裝小物清單紀錄 ✨</p>
+        
+        <!-- 頂部按鈕：引導回 Threads 主頁 -->
+        <div>
+            <a href="你的Threads主頁連結" target="_blank" rel="noopener noreferrer" class="threads-main-btn">
+                <span>追蹤我的 Threads 🤍</span>
+            </a>
+        </div>
+
+        <span class="notice">💡 部分連結含蝦皮分潤，支持我持續創作！當然也歡迎自搜哦！</span>
+    </header>
+
+    <!-- 分類 1：大型傢俱 -->
+    <div class="category-title">🛋️ 客廳與大型傢俱</div>
+
+    <div class="item-card">
+        <img src="https://via.placeholder.com/600x400" alt="防潑水貓抓布沙發" class="item-img">
+        <div class="item-info">
+            <span class="item-brand">AJ2 著家家居</span>
+            <div class="item-name">馬爾默 貓抓布 L 型沙發</div>
+            <div class="item-desc">顏色：奶茶灰 | 坐感偏硬挺，支撐力很好！擺在客廳整個溫馨感提升～</div>
+            <div class="btn-group">
+                <a href="你的Threads圖文連結" target="_blank" rel="noopener noreferrer" class="more-photos-btn">☕ 去 Threads 看更多真實紀錄與照片 💭</a>
+                <a href="你的商品購買或分潤連結" target="_blank" rel="noopener noreferrer" class="affiliate-btn">前往品牌官網 / 賣場 📦💡</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分類 2：書房/工作桌 -->
+    <div class="category-title">🖥️ 書房與工作空間</div>
+
+    <div class="item-card">
+        <img src="https://via.placeholder.com/600x400" alt="電動升降桌" class="item-img">
+        <div class="item-info">
+            <span class="item-brand">FUNTE</span>
+            <div class="item-name">電動升降桌 (實木桌板 150x70)</div>
+            <div class="item-desc">選配雙電機三節式，升降超平穩且有記憶鍵。對長時間在家工作的人超友好！</div>
+            <div class="btn-group">
+                <a href="你的Threads圖文連結" target="_blank" rel="noopener noreferrer" class="more-photos-btn">☕ 去 Threads 看更多真實紀錄與照片 💭</a>
+                <a href="你的商品購買或分潤連結" target="_blank" rel="noopener noreferrer" class="affiliate-btn">前往品牌官網 / 賣場 📦💡</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 熊熊的家 All Rights Reserved.</p>
+    </footer>
+</div>
+
+</body>
+</html>
