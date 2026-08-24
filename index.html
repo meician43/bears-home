@@ -121,27 +121,14 @@
             color: var(--text-main);
         }
 
-        /* 商品卡片 */
+        /* 純文字版商品卡片 */
         .item-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 16px;
-            padding: 16px;
-            margin-bottom: 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+            padding: 18px 16px;
+            margin-bottom: 14px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-            overflow: hidden;
-        }
-
-        /* 圖片區域 */
-        .item-img {
-            width: 100%;
-            height: 260px;
-            border-radius: 12px;
-            object-fit: cover;
-            background-color: #f3f3f3;
         }
 
         .item-info {
@@ -159,7 +146,7 @@
         .item-name {
             font-size: 1.05rem;
             font-weight: 700;
-            margin: 2px 0 6px;
+            margin: 3px 0 6px;
             color: var(--text-main);
             line-height: 1.35;
         }
@@ -167,8 +154,8 @@
         .item-desc {
             font-size: 0.85rem;
             color: var(--text-sub);
-            margin-bottom: 12px;
-            line-height: 1.45;
+            margin-bottom: 14px;
+            line-height: 1.5;
         }
 
         /* 按鈕群組區塊 */
@@ -232,7 +219,6 @@
         <h1>熊熊的家🐻‍❄️🐻 | 新家清單 & 日常選物</h1>
         <p class="bio">分享開箱過的傢俱、電器與軟裝小物清單紀錄 ✨</p>
         
-        <!-- 3-1. 頂部按鈕：請將 href 替換為你的 Threads 主頁網址 -->
         <div>
             <a href="https://www.threads.net/@你的帳號" target="_blank" rel="noopener noreferrer" class="threads-main-btn">
                 <span>追蹤我的 Threads 🤍</span>
@@ -243,57 +229,45 @@
     </header>
 
     <!-- 分類 1：大型傢俱 -->
-    <div class="category-title">🛋️ 客廳與餐廳</div>
+    <div class="category-title">🛋️ 客廳與大型傢俱</div>
 
     <div class="item-card">
-        <!-- 2. 照片：請將 src 替換為沙發圖片網址 -->
-        <img src="https://via.placeholder.com/600x400" alt="防潑水貓抓布沙發" class="item-img">
         <div class="item-info">
             <span class="item-brand">AJ2 愛家概念</span>
             <div class="item-name">WOODY 230cm 貓抓布</div>
-            <div class="item-desc">顏色：奶油杏色 | 坐感舒適，支撐力很好！擺在客廳整個溫馨感提升～</div>
+            <div class="item-desc">顏色：奶油杏色 ｜ 坐感舒適，支撐力很好！擺在客廳整個溫馨感提升～</div>
             <div class="btn-group">
-                <!-- 3-2. 去 Threads 的超連結 -->
                 <a href="https://www.threads.net/share/BAQEtIr372/" target="_blank" rel="noopener noreferrer" class="more-photos-btn">☕ 去 Threads 看更多真實紀錄與照片 💭</a>
-                <!-- 4. 前往品牌官網/賣場超連結 -->
                 <a href="https://www.aj2.com.tw/category/sofas/Woody/173" target="_blank" rel="noopener noreferrer" class="affiliate-btn">前往品牌官網 / 賣場 📦💡</a>
             </div>
         </div>
     </div>
 
-    <!-- 分類 2：書房/工作桌 -->
+    <!-- 分類 2：書房/工作空間 -->
     <div class="category-title">🖥️ 書房與工作空間</div>
 
     <div class="item-card">
-        <!-- 2. 照片：請將 src 替換為升降桌圖片網址 -->
-        <img src="https://via.placeholder.com/600x400" alt="電動升降桌" class="item-img">
         <div class="item-info">
             <span class="item-brand">FUNTE</span>
-            <div class="item-name">Prime4 三節式全白款 白色桌面+白色腳</div>
-            <div class="item-desc">尺寸可客製化超友善，後凹設計小宅適用，白色桌面+白色腳完美 WFH</div>
+            <div class="item-name">電動升降桌 (實木桌板 150x70)</div>
+            <div class="item-desc">選配雙電機三節式，升降超平穩且有記憶鍵。對長時間在家工作的人超友好！</div>
             <div class="btn-group">
-                <!-- 3-2. 去 Threads 的超連結 -->
-                <a href="https://www.threads.net/share/BAdoLw0N-E/" target="_blank" rel="noopener noreferrer" class="more-photos-btn">☕ 去 Threads 看更多真實紀錄與照片 💭</a>
-                <!-- 4. 前往品牌官網/賣場超連結 -->
-                <a href="https://s.shopee.tw/8Kog8CpILn" target="_blank" rel="noopener noreferrer" class="affiliate-btn">前往品牌官網 / 賣場 📦💡</a>
+                <a href="你的升降桌Threads貼文網址" target="_blank" rel="noopener noreferrer" class="more-photos-btn">☕ 去 Threads 看更多真實紀錄與照片 💭</a>
+                <a href="你的升降桌購買連結" target="_blank" rel="noopener noreferrer" class="affiliate-btn">前往品牌官網 / 賣場 📦💡</a>
             </div>
         </div>
     </div>
 
-    <!-- 1. 新增分類 3：廚房空間與陽台電器 -->
+    <!-- 分類 3：廚房與陽台家電 -->
     <div class="category-title">🍳 廚房與陽台家電</div>
 
     <div class="item-card">
-        <!-- 2. 照片：請將 src 替換為櫻花熱水器圖片網址 -->
-        <img src="https://via.placeholder.com/600x400" alt="櫻花熱水器" class="item-img">
         <div class="item-info">
             <span class="item-brand">SAKURA 櫻花</span>
             <div class="item-name">數位恆溫熱水器</div>
             <div class="item-desc">出水穩定不忽冷忽熱，恆溫效果非常好，冬天洗澡超幸福～</div>
             <div class="btn-group">
-                <!-- 3-2. 去 Threads 的超連結 -->
                 <a href="你的熱水器Threads貼文網址" target="_blank" rel="noopener noreferrer" class="more-photos-btn">☕ 去 Threads 看更多真實紀錄與照片 💭</a>
-                <!-- 4. 前往品牌官網/賣場超連結 -->
                 <a href="你的熱水器購買連結" target="_blank" rel="noopener noreferrer" class="affiliate-btn">前往品牌官網 / 賣場 📦💡</a>
             </div>
         </div>
